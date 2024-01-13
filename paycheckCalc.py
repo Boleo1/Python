@@ -1,4 +1,6 @@
 # This program will calculate your paycheck for you based on your hours worked and your hourly wage.
+import turtle
+
 
 hourly_wage = float(input("What is your hourly wage? "))
 hours_worked = float(input("How many hours did you work this pay period? "))
@@ -50,3 +52,17 @@ annual_pay = quarterly_pay * 4
 annual_tax = quarterly_tax * 4
 print("Annual pay would be: %.2f" % (annual_pay))
 print("Annual tax would be: %.2f" % (annual_tax))
+
+win = turtle.Screen()
+win.title("Pong by @BoleoTV")
+win.bgcolor("black")
+win.setup(width=800, height=600)
+win.tracer(0)
+
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write(f"Gross Pay: {gross_pay}  Net Pay: {net_pay}", align="center", font=("courier", 24,"normal"))
